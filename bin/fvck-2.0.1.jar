@@ -1,0 +1,23 @@
+FVCK-Core
+
+namespace app\forms;
+use FVCKFramework;
+use action;
+
+    formLoader:
+        #Requested activity
+        $rqst = applicationRequestableEntityActivity();
+        #Request activity for ActivityHandler
+        $ah = $rqst.applicationHandlerActivity;
+        #Activity request module
+        $rqst = $ah.(currentActivity);
+        #Requested build jar path for external application
+        $path = $rqst.activityRequestedBuild;
+        
+    function(set):
+        setValue(FVCK) = AbstractAction;
+        setValue(FVCK-Core) = $rqst(system.instructionAdapter);
+        setValue(FVCK-Handler) = $rqst(system.placeholderSystem);
+        setPlaceholder(FVCK-InstructionSet64) = module."/bin.XRadix64.jar".compatibilityModule;
+        setPlaceholder(FVCK-InstructionSetGlobal) = module."/bin/XRadixGL.jar".compatibilityModule;
+        setPlaceholder(FVCK-InstructionSetExternal) = module."$path".$rqst.action;
