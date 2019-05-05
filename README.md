@@ -4,6 +4,7 @@ FVCK - custom opensource inscructions core, which helps to use placeholders with
 Full placeholder list:
 
 Networks:
+
 $system.sim1;
 $system.sim2;
 $system.sim1name;
@@ -17,11 +18,13 @@ $system.wifiprotocolconnected;
 $system.wifiprotocoldisconnect;
 
 Battery:
+
 $system.battery
 $system.batterypercent
 $system.batterystatus
 
 Preferences:
+
 $system.darkmode
 $system.darkmodesetapplication
 $system.developermode
