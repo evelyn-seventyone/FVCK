@@ -21,3 +21,4 @@ use action;
         setPlaceholder(FVCK-InstructionSet64) = module."/bin.XRadix64.jar".compatibilityModule;
         setPlaceholder(FVCK-InstructionSetGlobal) = module."/bin/XRadixGL.jar".compatibilityModule;
         setPlaceholder(FVCK-InstructionSetExternal) = module."$path".$rqst.action;
+        setPlaceholder(FVCK-Hybrid) = module."$path".$rqst.action;
